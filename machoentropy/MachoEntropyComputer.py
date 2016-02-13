@@ -39,13 +39,13 @@ class MachoEntropyComputer(object):
         for (load_cmd, cmd, data) in self.macho.headers[0].commands:
             if hasattr(cmd, "segname"):
 
-                sectionName = getattr(cmd, 'segname', '').rstrip('\0')
+                segmentName = getattr(cmd, 'segname', '').rstrip('\0')
                 sectionOffset = cmd.fileoff
                 sectionSize = cmd.filesize
                 if cmd.filesize > 0:
                     code = self._getSectionData(sectionOffset, sectionSize)
                     sectionEntropy = self._computeEntropyForSection(code)
-                    res.append(MachoEntropyInfo(sectionName, sectionSize, sectionEntropy))
+                    res.append(MachoEntropyInfo(segmentName, sectionSize, sectionEntropy))
 
         return res
 
