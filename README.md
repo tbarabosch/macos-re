@@ -12,7 +12,3 @@ Scripts and tools for macOS reversing
 - Malware Toys — assorted analysis scripts for malware datasets (parse_vtreports.py, classify_macho.py, plot_entropy.py). See malware_toys/ for examples.
 
 - x64-shellcode-loader — minimal C loader and helper scripts to experiment with x64 shellcode. See x64-shellcode-loader/.
-
-## Tool highlights
-
-- [App Security Passport](app-security-passport/) extracts signed macOS app metadata and uses Apple's on-device Foundation Models Python SDK to explain it in plain language.
