@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+mini_edr/*.jsonl
 
 # C extensions
 *.so
